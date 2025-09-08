@@ -1,0 +1,36 @@
+{
+  "templates": [
+    {
+      "name": "E-commerce Product Listing Page",
+      "cluster": 1,
+      "pages": [
+        {
+          "url": "https://casino.hardrock.com/brighton/dining/ee-to-leet-ke-grill",
+          "uuid": "e0fc0177cc8102a23cb1a6130295d62c19717068"
+        },
+        {
+          "url": "https://casino.hardrock.com/brighton/dining/josiah-steakhouse",
+          "uuid": "3304b6f3495b3e16b6155d1933c6d93e4c92e1cd"
+        },
+        {
+          "url": "https://casino.hardrock.com/brighton/dining/slice",
+          "uuid": "789c962096a069603a16804ad6b4a04faec0e2ae"
+        },
+        {
+          "url": "https://casino.hardrock.com/brighton/dining/constant-grind",
+          "uuid": "54ab4069d0fbf0b393fc63f2078fe2b33bbf1c5e"
+        }
+      ]
+    },
+    {
+      "name": "Product Listing",
+      "cluster": 2,
+      "pages": [
+        {
+          "url": "https://casino.hardrock.com/brighton/dining",
+          "uuid": "4c6e8962afd8e14a04ec9f50229122850d7368cd"
+        }
+      ]
+    }
+  ]
+}
