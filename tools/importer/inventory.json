@@ -1,0 +1,170 @@
+{
+  "fragments": [
+    {
+      "name": "nav",
+      "path": "/nav",
+      "totalBoxes": 1,
+      "instances": [
+        {
+          "url": "https://casino.hardrock.com/brighton/dining/constant-grind",
+          "urlHash": "54ab4069d0fbf0b393fc63f2078fe2b33bbf1c5e",
+          "uuid": "54ab4069-00-3dad6f17c5ac52449dfbc495c4fa129caa1ae780",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/header[1]"
+        }
+      ],
+      "styles": {
+        "height": 165
+      }
+    },
+    {
+      "name": "footer",
+      "path": "/footer",
+      "totalBoxes": 1,
+      "instances": [
+        {
+          "url": "https://casino.hardrock.com/brighton/dining/constant-grind",
+          "urlHash": "54ab4069d0fbf0b393fc63f2078fe2b33bbf1c5e",
+          "uuid": "54ab4069-09-89ff2219ee91d5f4a14241aef628d6ef14f3b438",
+          "xpath": "/html[1]/body[1]/div[1]/footer[1]/div[1]/div[1]/div[1]/div[3]"
+        }
+      ],
+      "styles": {
+        "background": "rgb(8, 1, 9) none repeat scroll 0% 0% / auto padding-box border-box"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "name": "header",
+      "cluster": 1,
+      "source": "Header",
+      "target": "Header (header1)",
+      "key": "header1",
+      "instances": [
+        {
+          "url": "https://casino.hardrock.com/brighton/dining/constant-grind",
+          "urlHash": "54ab4069d0fbf0b393fc63f2078fe2b33bbf1c5e",
+          "uuid": "54ab4069-00-3dad6f17c5ac52449dfbc495c4fa129caa1ae780",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/header[1]"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 2,
+      "source": "Hero",
+      "target": "Hero (hero2)",
+      "key": "hero2",
+      "instances": [
+        {
+          "url": "https://casino.hardrock.com/brighton/dining/constant-grind",
+          "urlHash": "54ab4069d0fbf0b393fc63f2078fe2b33bbf1c5e",
+          "uuid": "54ab4069-01-bf6bc3422b133d22277cf37a21695689ccac15db",
+          "xpath": "/html[1]/body[1]/div[1]/main[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 3,
+      "source": "Columns",
+      "target": "Columns (columns3)",
+      "key": "columns3",
+      "instances": [
+        {
+          "url": "https://casino.hardrock.com/brighton/dining/constant-grind",
+          "urlHash": "54ab4069d0fbf0b393fc63f2078fe2b33bbf1c5e",
+          "uuid": "54ab4069-03-a82dcb8f2b8fe2c6c8338e1f4d4c8da50842f97e",
+          "xpath": "/html[1]/body[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[2]",
+          "section": "section-1"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 4,
+      "source": "Cards",
+      "target": "Cards (cards4)",
+      "key": "cards4",
+      "instances": [
+        {
+          "url": "https://casino.hardrock.com/brighton/dining/constant-grind",
+          "urlHash": "54ab4069d0fbf0b393fc63f2078fe2b33bbf1c5e",
+          "uuid": "54ab4069-05-89a93313fa69508aafeb55bfccca46195128be6f",
+          "xpath": "/html[1]/body[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 5,
+      "source": "Columns",
+      "target": "Columns (columns5)",
+      "key": "columns5",
+      "instances": [
+        {
+          "url": "https://casino.hardrock.com/brighton/dining/constant-grind",
+          "urlHash": "54ab4069d0fbf0b393fc63f2078fe2b33bbf1c5e",
+          "uuid": "54ab4069-07-cd6d2a5155fded935fb8e563a220787ce822a3b4",
+          "xpath": "/html[1]/body[1]/div[1]/footer[1]/div[1]/div[1]/div[1]/div[1]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 6,
+      "source": "Columns",
+      "target": "Columns (columns6)",
+      "key": "columns6",
+      "instances": [
+        {
+          "url": "https://casino.hardrock.com/brighton/dining/constant-grind",
+          "urlHash": "54ab4069d0fbf0b393fc63f2078fe2b33bbf1c5e",
+          "uuid": "54ab4069-09-89ff2219ee91d5f4a14241aef628d6ef14f3b438",
+          "xpath": "/html[1]/body[1]/div[1]/footer[1]/div[1]/div[1]/div[1]/div[3]",
+          "section": "section-2"
+        }
+      ]
+    }
+  ],
+  "outliers": [
+    {
+      "url": "https://casino.hardrock.com/brighton/dining/constant-grind",
+      "urlHash": "54ab4069d0fbf0b393fc63f2078fe2b33bbf1c5e",
+      "uuid": "54ab4069-02-14a22d23df3121eb34bec4504561db265da42bdb",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]"
+    },
+    {
+      "url": "https://casino.hardrock.com/brighton/dining/constant-grind",
+      "urlHash": "54ab4069d0fbf0b393fc63f2078fe2b33bbf1c5e",
+      "uuid": "54ab4069-04-f10b106d1160dd6f73372d9e7984d656e84736f0",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]"
+    },
+    {
+      "url": "https://casino.hardrock.com/brighton/dining/constant-grind",
+      "urlHash": "54ab4069d0fbf0b393fc63f2078fe2b33bbf1c5e",
+      "uuid": "54ab4069-06-2d9d9b8197c2a5e14ed3fca95e9677e2ed4f7c17",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]"
+    },
+    {
+      "url": "https://casino.hardrock.com/brighton/dining/constant-grind",
+      "urlHash": "54ab4069d0fbf0b393fc63f2078fe2b33bbf1c5e",
+      "uuid": "54ab4069-08-ae4667c47425c9008ff616e9b1bfb99c681b6cca",
+      "xpath": "/html[1]/body[1]/div[1]/footer[1]/div[1]/div[1]/div[1]/div[2]",
+      "section": "section-2"
+    }
+  ],
+  "sections": [
+    {
+      "name": "section-1",
+      "background": "rgb(236, 236, 236) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 1
+    },
+    {
+      "name": "section-2",
+      "background": "rgb(8, 1, 9) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 3
+    }
+  ]
+}
