@@ -32,6 +32,24 @@
       "source": "CRAWL",
       "targetPath": "/brighton/dining/slice",
       "id": "789c962096a069603a16804ad6b4a04faec0e2ae"
+    },
+    {
+      "url": "https://casino.hardrock.com/brighton/directions",
+      "source": "CRAWL",
+      "targetPath": "/brighton/directions",
+      "id": "4651ad81f5f5874f3d194b5c64fda8e6bbf32815"
+    },
+    {
+      "url": "https://casino.hardrock.com/brighton/faq",
+      "source": "CRAWL",
+      "targetPath": "/brighton/faq",
+      "id": "01320634da1ce084127c2f18a2d6a279baf2be0b"
+    },
+    {
+      "url": "https://casino.hardrock.com/brighton/gift-cards",
+      "source": "CRAWL",
+      "targetPath": "/brighton/gift-cards",
+      "id": "93dd85fd20012b287353313f70427a5536312df9"
     }
   ],
   "crawlOptions": {
