@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -24,4 +25,113 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+
+.cards.cards15 > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (width <= 1024px) {
+  .cards.cards15 > ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card: vertical layout, visually balanced height, minimal gap above buttons */
+.cards.cards15 > ul > li {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  padding: 24px;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 192px; /* Further reduced for a snug fit */
+  height: 100%;
+}
+
+/* Top area for logo/image - eliminate reserved space if empty */
+.cards.cards15 .cards-card-body:first-child:empty {
+  min-height: 0;
+  margin-bottom: 0;
+  padding: 0;
+  display: none;
+}
+
+.cards.cards15 .cards-card-body:first-child {
+  min-height: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+/* Headline styling */
+.cards.cards15 .cards-card-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+
+/* Description styling */
+.cards.cards15 .cards-card-body p {
+  font-size: 14px;
+  color: #222;
+  margin: 0 0 6px; /* Tighter margin for compactness */
+  line-height: 1.5;
+}
+
+/* Ensure last paragraph only provides space for button row */
+.cards.cards15 .cards-card-body p:last-child {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  padding-top: 0;
+}
+
+/* Button appearance and override inherited roundness/margin */
+.cards.cards15 .cards-card-body a,
+.cards.cards15 .cards-card-body a.button {
+  background: #f60;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 3px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1.2;
+  transition: background 0.2s;
+  box-sizing: border-box;
+  padding: 10px 22px;
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.cards.cards15 .cards-card-body a.button,
+.cards.cards15 .cards-card-body .button {
+  margin: 0;
+}
+
+.cards.cards15 .cards-card-body a:not(:first-child) {
+  margin-left: 0;
+}
+
+/* Stack card content vertically and anchor button row to bottom */
+.cards.cards15 .cards-card-body:last-child {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
