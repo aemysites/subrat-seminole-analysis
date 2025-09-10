@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -38,7 +39,6 @@
   padding: 0;
 }
 
-/* Top-level flex row, full-width, nearly zero top padding */
 .columns.columns10 > div {
   display: flex;
   flex-direction: row;
@@ -53,7 +53,6 @@
   width: 100%;
 }
 
-/* Divider: exact height matching content, almost flush with top/bottom */
 .columns.columns10 > div::after {
   display: block;
   position: absolute;
@@ -68,7 +67,6 @@
   content: "";
 }
 
-/* Columns: equal space, minimal side padding, top-aligned */
 .columns.columns10 > div > div {
   flex: 1 1 0;
   display: flex;
@@ -87,7 +85,6 @@
   padding-left: 5px;
 }
 
-/* Headings: slightly larger, almost no space below */
 .columns.columns10 h2 {
   font-size: 26px;
   font-weight: 600;
@@ -97,7 +94,6 @@
   line-height: 1.08;
 }
 
-/* Subtext: smaller, tight under heading */
 .columns.columns10 p {
   font-size: 13px;
   color: #222;
@@ -105,13 +101,11 @@
   margin: 0 0 7px;
 }
 
-/* Button container: minimal vertical spacing */
 .columns.columns10 .button-container {
   margin: 0 0 4px;
   text-align: center;
 }
 
-/* Buttons: width, height, almost touching, block centered */
 .columns.columns10 .button,
 .columns.columns10 a.button:any-link {
   display: block;
@@ -148,7 +142,6 @@
   text-decoration: none;
 }
 
-/* Responsive: stack columns, remove divider, relax button width */
 @media (width <= 800px) {
   .columns.columns10 > div {
     flex-direction: column;
@@ -175,7 +168,6 @@
   }
 }
 
-/* Tighten spacing for mobile */
 @media (width <= 480px) {
   .columns.columns10 > div {
     padding-top: 0;
@@ -195,5 +187,103 @@
   .columns.columns10 a.button:any-link {
     font-size: 12px;
     padding: 9px 0;
+  }
+}
+
+
+.columns.columns14 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.columns.columns14 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: #fff;
+  padding: 0;
+  margin-top: 0;
+}
+
+.columns.columns14 > div > .columns-img-col {
+  flex: 0 0 40%;
+  max-width: 40%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.columns.columns14 > div > .columns-img-col picture,
+.columns.columns14 > div > .columns-img-col img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.columns.columns14 > div > div:not(.columns-img-col) {
+  flex: 1 1 60%;
+  max-width: 60%;
+  padding: 0 0 0 28px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #fff;
+}
+
+/* ZERO OUT margin on first child to ensure heading aligns flush with image top */
+.columns.columns14 > div > div:not(.columns-img-col) > :first-child {
+  margin-top: 0;
+}
+
+/* MINIMIZE top/bottom margin for headings to keep block tight */
+.columns.columns14 h2,
+.columns.columns14 h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.columns.columns14 h2 {
+  color: #222;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.columns.columns14 h3 {
+  color: #222;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.columns.columns14 p {
+  color: #222;
+  font-size: 1rem;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.columns.columns14 strong {
+  font-weight: 600;
+}
+
+/* Responsive: stack vertically on mobile/tablet */
+@media (width <= 900px) {
+  .columns.columns14 > div {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .columns.columns14 > div > .columns-img-col,
+  .columns.columns14 > div > div:not(.columns-img-col) {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .columns.columns14 > div > div:not(.columns-img-col) {
+    padding: 24px 0 0;
   }
 }
