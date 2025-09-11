@@ -301,7 +301,6 @@
   padding: 48px 0;
 }
 
-/* Visible vertical divider between columns */
 .columns.columns4.block.columns-2-cols > div::before {
   display: block;
   content: "";
@@ -316,7 +315,6 @@
   pointer-events: none;
 }
 
-/* Two column children: force equal width, center content within */
 .columns.columns4.block.columns-2-cols > div > div {
   display: flex;
   flex-direction: column;
@@ -326,7 +324,6 @@
   max-width: 260px;
 }
 
-/* Headings: match visual style, increase spacing below */
 .columns.columns4.block.columns-2-cols > div > div h2 {
   font-size: 18px;
   font-weight: 400;
@@ -336,7 +333,6 @@
   line-height: 1.2;
 }
 
-/* Subtext in columns: center, space out lines */
 .columns.columns4.block.columns-2-cols > div > div p {
   font-size: 14px;
   color: #222;
@@ -345,14 +341,12 @@
   line-height: 1.7;
 }
 
-/* Italic for day ranges */
 .columns.columns4.block.columns-2-cols > div > div p em {
   color: #444;
   font-style: italic;
   font-size: 13px;
 }
 
-/* Stack menu button containers vertically with spacing */
 .columns.columns4.block.columns-2-cols .button-container {
   display: flex;
   justify-content: center;
@@ -363,7 +357,6 @@
   margin-bottom: 0;
 }
 
-/* Orange menu buttons: block level, full width, correct shape */
 .columns.columns4.block.columns-2-cols .button-container .button {
   display: block;
   width: 220px;
@@ -382,7 +375,6 @@
   text-align: center;
 }
 
-/* Responsive: stack vertically and remove divider */
 @media (width <= 900px) {
   .columns.columns4.block.columns-2-cols > div {
     flex-direction: column;
@@ -397,5 +389,127 @@
   .columns.columns4.block.columns-2-cols > div > div {
     max-width: 100%;
     width: 90%;
+  }
+}
+
+
+.columns.columns9 {
+  background: #ededed;
+  padding: 0;
+  border-bottom: 2px solid #fff;
+}
+
+.columns.columns9 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.columns.columns9 > div > div {
+  flex: 1 1 0;
+  min-width: 0;
+  box-sizing: border-box;
+  position: relative;
+  padding: 18px 8px 14px; /* add a touch more vertical breathing room */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.columns.columns9 > div > div:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+
+.columns.columns9 h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin: 0 0 14px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.columns.columns9 p {
+  font-size: 14px;
+  color: #222;
+  text-align: center;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.columns.columns9 em {
+  font-style: italic;
+  color: #222;
+}
+
+/* Add extra vertical space between the two lines in the Hours column */
+.columns.columns9 > div > div:first-child p br {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.columns.columns9 .button-container {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.columns.columns9 .button-container:last-child {
+  margin-bottom: 0;
+}
+
+.columns.columns9 a.button {
+  display: block;
+  width: 168px;
+  max-width: 100%;
+  padding: 13px 0 11px;
+  background: #f60;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 0;
+  margin: 0 auto;
+  box-shadow: none;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.columns.columns9 a.button:hover,
+.columns.columns9 a.button:focus {
+  background: #e65500;
+}
+
+.columns.columns9 a[href^="tel"] {
+  color: #222;
+  text-decoration: underline;
+}
+
+@media (width <= 900px) {
+  .columns.columns9 > div {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .columns.columns9 > div > div {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    padding: 14px 0 10px;
+  }
+
+  .columns.columns9 > div > div:last-child {
+    border-bottom: none;
+  }
+
+  .columns.columns9 a.button {
+    width: 100%;
   }
 }
