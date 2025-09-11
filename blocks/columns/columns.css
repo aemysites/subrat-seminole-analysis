@@ -233,12 +233,10 @@
   background: #fff;
 }
 
-/* ZERO OUT margin on first child to ensure heading aligns flush with image top */
 .columns.columns14 > div > div:not(.columns-img-col) > :first-child {
   margin-top: 0;
 }
 
-/* MINIMIZE top/bottom margin for headings to keep block tight */
 .columns.columns14 h2,
 .columns.columns14 h3 {
   margin-top: 0;
@@ -270,7 +268,6 @@
   font-weight: 600;
 }
 
-/* Responsive: stack vertically on mobile/tablet */
 @media (width <= 900px) {
   .columns.columns14 > div {
     flex-direction: column;
@@ -285,5 +282,120 @@
 
   .columns.columns14 > div > div:not(.columns-img-col) {
     padding: 24px 0 0;
+  }
+}
+
+
+.columns.columns4.block.columns-2-cols {
+  background: #eee;
+  padding: 0;
+}
+
+.columns.columns4.block.columns-2-cols > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 112px;
+  position: relative;
+  padding: 48px 0;
+}
+
+/* Visible vertical divider between columns */
+.columns.columns4.block.columns-2-cols > div::before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background: #ccc;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Two column children: force equal width, center content within */
+.columns.columns4.block.columns-2-cols > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 260px;
+  max-width: 260px;
+}
+
+/* Headings: match visual style, increase spacing below */
+.columns.columns4.block.columns-2-cols > div > div h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #222;
+  text-align: center;
+  margin: 0 0 18px;
+  line-height: 1.2;
+}
+
+/* Subtext in columns: center, space out lines */
+.columns.columns4.block.columns-2-cols > div > div p {
+  font-size: 14px;
+  color: #222;
+  text-align: center;
+  margin: 0 0 14px;
+  line-height: 1.7;
+}
+
+/* Italic for day ranges */
+.columns.columns4.block.columns-2-cols > div > div p em {
+  color: #444;
+  font-style: italic;
+  font-size: 13px;
+}
+
+/* Stack menu button containers vertically with spacing */
+.columns.columns4.block.columns-2-cols .button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.columns.columns4.block.columns-2-cols .button-container:last-child {
+  margin-bottom: 0;
+}
+
+/* Orange menu buttons: block level, full width, correct shape */
+.columns.columns4.block.columns-2-cols .button-container .button {
+  display: block;
+  width: 220px;
+  background: #f60;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 11px 0 9px;
+  margin: 0 auto;
+  box-shadow: none;
+  border: none;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+/* Responsive: stack vertically and remove divider */
+@media (width <= 900px) {
+  .columns.columns4.block.columns-2-cols > div {
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 0;
+  }
+
+  .columns.columns4.block.columns-2-cols > div::before {
+    display: none;
+  }
+
+  .columns.columns4.block.columns-2-cols > div > div {
+    max-width: 100%;
+    width: 90%;
   }
 }
