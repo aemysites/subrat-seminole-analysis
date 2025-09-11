@@ -399,3 +399,150 @@
 .cards.cards5 .button-container a {
   margin-left: 0;
 }
+
+
+.cards.cards12 {
+  max-width: 1140px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.cards.cards12 > ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+}
+
+/* Card: more generous vertical padding for relaxed feel */
+.cards.cards12 > ul > li {
+  background: #fff;
+  border: 1px solid #ededed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 320px;
+  padding: 20px 18px 18px;
+  box-sizing: border-box;
+}
+
+.cards.cards12 > ul > li:not(:last-child) {
+  border-right: none;
+}
+
+/* Logo/image area: bring logo closer to top, larger, less bottom space */
+.cards.cards12 .cards-card-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 0;
+  margin-bottom: 2px;
+  min-height: 54px;
+}
+
+.cards.cards12 .cards-card-image img {
+  max-width: 165px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Card body: less vertical spacing overall */
+.cards.cards12 .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start;
+}
+
+/* Title: a bit larger and bolder */
+.cards.cards12 .cards-card-body h3 {
+  font-size: 1.42rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 4px;
+  line-height: 1.22;
+}
+
+/* Description: minimal margin below */
+.cards.cards12 .cards-card-body p {
+  color: #555;
+  font-size: 1.02rem;
+  margin: 0 0 2px;
+  line-height: 1.38;
+}
+
+/* Last p (buttons): align to bottom, slightly wider gap */
+.cards.cards12 .cards-card-body p:last-of-type {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: auto;
+  margin-bottom: 0;
+  align-items: flex-end;
+}
+
+/* Buttons: wider, a bit more vertical padding */
+.cards.cards12 .cards-card-body p:last-of-type a {
+  display: inline-block;
+  background: #f60;
+  color: #fff;
+  border: 2px solid #f60;
+  border-radius: 2px;
+  padding: 12px 0;
+  width: 160px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  line-height: 1.2;
+  margin: 0;
+  transition: background 0.2s, color 0.2s;
+  text-align: center;
+}
+
+.cards.cards12 .cards-card-body p:last-of-type a:hover,
+.cards.cards12 .cards-card-body p:last-of-type a:focus {
+  background: #fff;
+  color: #f60;
+}
+
+/* Responsive: stack cards, compact on mobile */
+@media (width <= 900px) {
+  .cards.cards12 {
+    max-width: 100%;
+  }
+
+  .cards.cards12 > ul {
+    grid-template-columns: 1fr;
+  }
+
+  .cards.cards12 > ul > li {
+    min-height: 0;
+    margin-bottom: 12px;
+    padding: 12px 8px 8px;
+  }
+
+  .cards.cards12 > ul > li:not(:last-child) {
+    border-right: 1px solid #ededed;
+  }
+
+  .cards.cards12 .cards-card-image {
+    min-height: 40px;
+    margin-bottom: 2px;
+  }
+
+  .cards.cards12 .cards-card-body p:last-of-type a {
+    width: 100%;
+    min-width: 120px;
+    margin-bottom: 0;
+  }
+}
