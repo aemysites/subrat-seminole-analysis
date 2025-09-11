@@ -414,7 +414,7 @@
   min-width: 0;
   box-sizing: border-box;
   position: relative;
-  padding: 18px 8px 14px; /* add a touch more vertical breathing room */
+  padding: 18px 8px 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -446,7 +446,6 @@
   color: #222;
 }
 
-/* Add extra vertical space between the two lines in the Hours column */
 .columns.columns9 > div > div:first-child p br {
   display: block;
   margin-bottom: 30px;
@@ -511,5 +510,145 @@
 
   .columns.columns9 a.button {
     width: 100%;
+  }
+}
+
+
+.columns.columns11 {
+  background: #eee;
+  padding: 40px 0;
+  width: 100%;
+}
+
+/* Make columns more compact and closely spaced */
+.columns.columns11 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 180px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Columns: do not stretch, wrap content, minimal side padding */
+.columns.columns11 > div > div {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 0 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Divider between columns */
+.columns.columns11 > div::after {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 70%;
+  background: #ccc;
+  z-index: 1;
+  pointer-events: none;
+  display: block;
+}
+
+/* Headings */
+.columns.columns11 h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 18px;
+  margin-top: 0;
+  line-height: 1.25;
+  text-align: center;
+}
+
+/* Paragraphs */
+.columns.columns11 p {
+  color: #222;
+  font-size: 15px;
+  margin: 4px 0;
+  text-align: center;
+}
+
+/* Italic sublabels */
+.columns.columns11 em {
+  color: #444;
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* Button containers: stack buttons, centered */
+.columns.columns11 .button-container {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* Highly specific selector to override inherited styles.
+   This will ensure variable width per button, fitting each label. */
+.columns.columns11 .button,
+.columns.columns11 p .button,
+.columns.columns11 .button-container > a.button {
+  display: inline-block;
+  background: #f60;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 10px 40px;
+  margin: 0 auto;
+  border: none;
+  box-sizing: border-box;
+  text-align: center;
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 0;
+}
+
+/* Remove bottom margin for last button */
+.columns.columns11 .button-container:last-of-type .button {
+  margin-bottom: 0;
+}
+
+/* Responsive: stack columns, keep buttons content-sized and centered */
+@media (width <= 900px) {
+  .columns.columns11 > div {
+    flex-direction: column;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .columns.columns11 > div::after {
+    display: none;
+  }
+
+  .columns.columns11 > div > div {
+    padding: 16px 0;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .columns.columns11 .button,
+  .columns.columns11 p .button,
+  .columns.columns11 .button-container > a.button {
+    padding-left: 24px;
+    padding-right: 24px;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
   }
 }
